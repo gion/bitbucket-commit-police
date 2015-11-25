@@ -107,7 +107,7 @@
     function doesNotEndWithDot(message) {
         // must necessarily end with an alpha-numeric value
         // or a new line... thanks, Bitbucket!@#$
-        return /[a-z0-9\n\s]$/i.test(message);
+        return /[a-z0-9]$/i.test(message.replace(/(\s+|\n+)$/, ''));
     }
 
     init();
